@@ -1,0 +1,87 @@
+.restaurants {
+    padding: $paddingbox;
+    background-color: $shadowbgcolor;
+    padding-bottom: 2.5rem;
+    &__title {
+        @include marginauto;
+        padding-bottom: 1.5rem;
+    }
+    &__box {
+        gap: 2rem;
+        @include marginauto;
+        @include bigscreen {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.cards {
+    border-radius: 1rem;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    @include boxshadow;
+    @include bigscreen {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    &:hover {
+        transform: scale(1.01);
+        transition: all 200ms ease-in-out;
+    }
+
+    &__link ,&__new {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        position: relative;
+    }
+    &__new::before {
+        content: "Nouveau";
+        position: absolute;
+        height: 2rem;
+        width: 5rem;
+        background-color: $colortertiary;
+        display: grid;
+        place-items: center;
+        border-radius: 0.1rem;
+        color: darken($colortertiary , 50%);
+        top: -9rem;
+        right: 0.75rem;
+    }
+    &__img {
+        height: 11rem;
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: none;
+        object-fit: cover;
+    }
+    &__footer {
+        padding: 0.75rem 1rem 0.75rem 1rem;
+        position: relative;
+    }
+    &__footer i {
+        font-size: 1.5rem;
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .fa-regular:hover {
+        opacity: 0;
+    }
+
+    .fa-solid {
+        @include heart;
+        &:hover,&:focus {
+            opacity: 1;
+        }
+    }
+        
+    &__h3 , &__p {
+        margin: 0;
+    }
+    &__h3 {
+        padding-bottom: 5px;
+    }
+}

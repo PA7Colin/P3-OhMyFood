@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap");
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+p {
+  font-weight: lighter;
+}
+
+header {
+  font-family: "Shrikhand", cursive;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+header h1 {
+  margin: 0;
+}
+
+.loc {
+  background-color: #EAEAEA;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 1.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+.loc__p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.explorer {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 2rem 2rem 3rem 2rem;
+  text-align: center;
+}
+.explorer__title {
+  margin: 0;
+}
+.explorer__p {
+  margin-bottom: 2rem;
+}
+.explorer__btn {
+  border: none;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  padding: 1.1rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  transition-duration: 300ms;
+}
+.explorer__btn:hover {
+  background-color: #f6f6f6;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.92;
+}
+
+.tuto {
+  padding: 1rem;
+  counter-reset: numlist;
+  max-width: 1300px;
+  margin: auto;
+}
+.tuto__ol {
+  padding: 0;
+  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .tuto__ol {
+    display: flex;
+    gap: 2rem;
+  }
+}
+.tuto li {
+  position: relative;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin: 0 0 1.5rem 1rem;
+  background-color: #f6f6f6;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+}
+.tuto li i {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  color: #aaaaaa;
+}
+@media screen and (min-width: 768px) {
+  .tuto li {
+    width: 33%;
+  }
+}
+.tuto li:hover {
+  background-color: #f2eafb;
+  transition: all 150ms ease-in-out;
+}
+.tuto li::before {
+  position: absolute;
+  counter-increment: numlist;
+  content: counter(numlist);
+  background: #9356DC;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  left: -0.5rem;
+}
+
+.restaurants {
+  padding: 1rem;
+  background-color: #f6f6f6;
+  padding-bottom: 2.5rem;
+}
+.restaurants__title {
+  max-width: 1300px;
+  margin: auto;
+  padding-bottom: 1.5rem;
+}
+.restaurants__box {
+  gap: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.cards {
+  border-radius: 1rem;
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+}
+@media screen and (min-width: 768px) {
+  .cards {
+    width: 45%;
+    margin-bottom: 0;
+  }
+}
+.cards:hover {
+  transform: scale(1.01);
+  transition: all 200ms ease-in-out;
+}
+.cards__link, .cards__new {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+}
+.cards__new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  display: grid;
+  place-items: center;
+  border-radius: 0.1rem;
+  color: #1b6150;
+  top: -9rem;
+  right: 0.75rem;
+}
+.cards__img {
+  height: 11rem;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+}
+.cards__footer {
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  position: relative;
+}
+.cards__footer i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.cards .fa-regular:hover {
+  opacity: 0;
+}
+.cards .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+.cards .fa-solid:hover, .cards .fa-solid:focus {
+  opacity: 1;
+}
+.cards__h3, .cards__p {
+  margin: 0;
+}
+.cards__h3 {
+  padding-bottom: 5px;
+}
+
+.footer {
+  background-color: #353535;
+  padding: 1rem;
+}
+.footer__logo {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  margin: 0.5rem 0 1rem 0;
+}
+.footer__link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+.footer__ul {
+  padding-left: 0;
+}
+.footer i {
+  margin-right: 0.5rem;
+}
+
+.box {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

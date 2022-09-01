@@ -1,0 +1,54 @@
+.tuto {
+    padding: $paddingbox;
+    counter-reset: numlist;
+    @include marginauto;
+    &__ol {
+        padding: 0;
+        list-style-type: none;
+        @include bigscreen {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+        
+    
+    & li {
+        position: relative;
+        border-radius: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        margin: 0 0 1.5rem 1rem;
+        background-color: $shadowbgcolor;
+        @include boxshadow;
+       & i {
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            color: $lightgrey;
+        }
+        @include bigscreen {
+            width: 33%;
+        }
+        &:hover {
+            background-color: lighten($colorprimary , 35%);
+            transition: all 150ms ease-in-out;
+        }
+       
+    } 
+        
+    & li::before
+    {
+        position: absolute;
+        counter-increment: numlist;
+        content: counter(numlist) ;
+        background : $colorprimary;
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        left: -0.5rem;
+    }
+}

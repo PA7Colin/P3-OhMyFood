@@ -1,0 +1,9 @@
+$breakpoints: (
+  fullscreen: 768px
+);
+
+@mixin bigscreen  {
+  @media screen and (min-width: map-get($breakpoints, fullscreen)) {
+    @content;
+  }
+}

@@ -1,0 +1,17 @@
+@mixin boxshadow {
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+}
+
+@mixin marginauto {
+  max-width: 1300px;
+  margin: auto;
+}
+
+@mixin heart {
+  color: transparent;
+  background-image: linear-gradient(0deg, $colorprimary , $colorsecondary);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
