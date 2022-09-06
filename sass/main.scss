@@ -3,17 +3,20 @@
 @import "./utils/mixins";
 @import "./utils/variables";
 @import "./utils/breakpoints";
+@import "./utils/keyframes";
 
 @import "./base/base";
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/skeleton";
 
 @import "./layout/header";
 @import "./layout/explorer";
 @import "./layout/tutomenu";
 @import "./layout/restaurants";
 @import "./layout/footer";
+@import "./layout/menupages";
 
 
 

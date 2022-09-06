@@ -61,17 +61,13 @@
         position: relative;
     }
     &__footer i {
-        font-size: 1.5rem;
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
+        @include heartposition;
     }
-    .fa-regular:hover {
+    .fa-regular.fa-heart:hover {
         opacity: 0;
     }
 
-    .fa-solid {
+    .fa-solid.fa-heart{
         @include heart;
         &:hover,&:focus {
             opacity: 1;

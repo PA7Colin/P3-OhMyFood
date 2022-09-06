@@ -1,14 +1,29 @@
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accueil - OhMyFood</title>
+    <link rel="icon" type="image/x-icon" href="./images/logo/favicons.ico" />
     <script src="https://kit.fontawesome.com/63867b63ad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
+    <div class="loader">
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+      <div class="loader__wave"></div>
+    </div>
+    
     <header>
         <h1>ohmyfood</h1>
     </header>
@@ -21,7 +36,7 @@
       <section class="explorer">
         <h2 class="explorer__title">Réservez le menu qui<br>vous convient</h2>
         <p class="explorer__p">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#"><button class="explorer__btn">Explorer nos restaurants</button></a>
+        <button class="explorer__btn">Explorer nos restaurants</button>
       </section>
       
       <aside class="tuto">
@@ -33,11 +48,11 @@
         </ol>
       </aside>
       
-      <section class="restaurants">
+      <section id="resto" class="restaurants">
         <h2 class="restaurants__title">Restaurants</h2>
         <div class="restaurants__box">
           <div class="cards">
-            <a href="#" class="cards__new">
+            <a href="./pages/la-palette-du-gout.html" class="cards__new">
               <img class="cards__img" src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
               <div class="cards__footer">
                 <h3 class="cards__h3">La palette du goût</h3>
