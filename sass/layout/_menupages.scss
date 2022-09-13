@@ -21,6 +21,10 @@
     max-height: 30rem;
     object-fit: cover;
     display: block;
+    @media screen and (max-width: 768px) {
+        max-height: 15rem;
+    }
+
 }
 
 .menu {
@@ -46,7 +50,8 @@
 .submenus {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: repeat 1rem;
+    column-gap: 1rem; 
+    
     
     @include bigscreen {
     grid-template-columns: repeat(3,1fr);
@@ -66,10 +71,19 @@
             background-color: $colortertiary;
         }
     }
+    &__description {
+        @include ellipsis;
+        h4 , p {
+            @include ellipsis;
+        }
+    }
+    &__sub {
+        @include ellipsis;
+    } 
     &__dish {
         @include animationmenus;
-        @include boxshadowbis;
         @include dishcard;
+        @include boxshadowbis;
         margin-bottom: 1rem;
         overflow: hidden;
         
@@ -85,12 +99,10 @@
                 animation: checkrotate 0.5s ease-in-out;
             }
         }
-    }
-            
+    }     
     &__price {
         font-weight: bold;
     }
-    
     &__check {
         @include checkskeleton;
         transition: all 600ms ease-in-out;
@@ -100,8 +112,7 @@
     }
     & i {
         @include check;
-    }
-    
+    }  
 }
 
 .order {
